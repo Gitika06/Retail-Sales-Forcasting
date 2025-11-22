@@ -1,47 +1,41 @@
-Retail Sales Forecasting Using Time Series (ARIMA)
-Project Overview
+# Retail Sales Forecasting using Time Series Analysis
 
-This project builds a 30-day sales forecast using time-series analysis (ARIMA).
-The goal is to understand historical sales patterns and predict future demand for better business planning.
+## Project Overview
+This project builds a forecasting model using ARIMA to predict the next 30 days of retail sales. The dataset includes Date and Sales values, and preprocessing ensures proper time-series structure.
 
-Dataset
-The dataset contains the following columns:
-Index (Unnamed column)
-Date
-Sales
-Note: Your Date column is converted into a DateTime index during preprocessing.
+## Features
+- Clean and preprocess sales dataset  
+- Convert Date column to datetime format  
+- Set Date as index for time-series modeling  
+- Perform stationarity checks (ADF Test)  
+- Build ARIMA model  
+- Forecast next 30 days  
+- Visualize historical vs forecasted sales  
 
-Project Workflow
-Data Loading
-Upload dataset using Google Colab’s files.upload()
-Load CSV into a DataFrame
+## Techniques Used
+- Exploratory Data Analysis (EDA)
+- Time Series Analysis
+- ARIMA Model
+- Trend + Forecast Visualization
 
-Data Cleaning
-Remove unnamed index column
-Convert Date to datetime
-Set Date as index
-Resample to daily frequency (if needed)
+## Tech Stack
+- Python  
+- Pandas  
+- NumPy  
+- Matplotlib  
+- Statsmodels
 
-Exploratory Analysis (EDA)
-Plot historical sales
-Check trends and seasonality
+## Dataset
+- Columns: Index (unnamed), Date, Sales  
+- Date column is set as index during preprocessing  
+- Dataset used: Salescsv  
 
-ARIMA Modeling
-Fit ARIMA/SARIMA model
-Evaluate model residuals
-Generate future predictions for 30 days
+## How to Run
+1. Clone the repository  
+2. Open the notebook in Google Colab or Jupyter  
+3. Upload your CSV file  
+4. Run cells in order  
 
-Forecast Visualization
-Blue line → Historical sales
-Orange line → Next 30-day predicted sales
-
-Results
-The ARIMA model successfully predicts future sales based on historical behavior.
-Visualization clearly shows the upcoming 30-day trend.
-
-Tech Stack
-Python
-Pandas
-Matplotlib
-Statsmodels
-Google Colab
+## Output
+- Line chart of historical sales  
+- Next 30 days forecast visualized in orange
